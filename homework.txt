@@ -1,0 +1,120 @@
+1--------------------------
+mkdir gitHome
+cd gitHome
+touch hello.sh
+git config --local user.name "Mushegh"
+git config --local user.email mushegh.esayan.im@gmail.com
+git config --local core.editor vim
+git config --local --list
+
+2---------------------------
+vim hello.sh
+#!/bin/bash
+
+echo 'Hello World'
+
+:wq
+
+git add hello.sh
+git commit
+
+First commit
+
+:wq
+
+
+3----------------------------
+vim hello.sh
+...
+echo 'Second Commit'
+
+:wq
+
+git add hello.sh
+git commit
+
+Second commit
+
+:wq
+
+4----------------------------
+
+git branch newBranch
+git checkout newBranch
+
+vim hello.sh
+...
+echo 'New branch'
+
+:wq
+
+git add hello.sh
+git commit
+
+New branch commit
+
+:wq
+
+5----------------------------
+
+git checkout master
+git branch lastCommit
+git rm hello.sh
+git revert 23cd2cf
+
+6---------------------------
+vim hello.sh
+
+#!/bin/bash
+
+echo 'first branch'
+
+:wq
+
+git add hello.sh
+git commit
+
+git chechout newBranch
+vim test.sh
+
+#!/bin/bash/
+
+echo 'second branch'
+
+:wq
+
+git add test.sh
+git commit
+Second branch
+:wq
+
+7--------------------------
+git merge 
+git add .
+git commit 
+:wq
+
+8--------------------------
+git remote add origin https://github.com/musho04/Homewrok_TC.git
+vim .git/config
+
+add your token
+
+:wq
+
+git push -u oringin master
+
+9------------------------
+cd ..
+mkdir newRepo
+cd newRepo
+
+git init
+git pull https://github.com/musho04/Homewrok_TC.git
+
+
+
+
+
+
+
